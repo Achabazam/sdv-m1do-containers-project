@@ -35,6 +35,7 @@ fn get_random_joke() -> Json<Joke> {
         Joke::new("What do you call fake spaghetti?", "An impasta."),
         Joke::new("Why was the math book sad?", "Because it had too many problems."),
         Joke::new("How do you organize a space party?", "You planet."),
+        Joke::new("C'est deux steak dans la foret et il en manque un. Pourquoi ?", "Il s'steak'aché."),
     ];
     Json(jokes.choose(&mut rand::thread_rng()).unwrap().clone())
 }
