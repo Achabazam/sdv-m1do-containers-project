@@ -2,6 +2,10 @@
 
 *Tested with `rust v1.82.0` et `node 23.0.0`.*
 
+### Prerequisite
+
+Install docker and docker: https://docs.docker.com/engine/install/
+
 ## Development
 
 ### API
@@ -14,7 +18,15 @@ You can also install [cargo-watch](https://crates.io/crates/cargo-watch) to watc
 
 #### Using Docker
 
-> TODO
+Connect to the api pod with docker exec -it <contener-name> /bin/bash
+
+After making some dev stuff on the api, you can build a new dev image with this commande from the root directory with this command:
+
+docker build -t <image_name> -f sdv-api/Dockerfile .
+
+edit docker-compose_dev.yml and change the image_name of the api_dev service
+
+run docker compose -f docker-compose_dev.yml up to see the change
 
 ### Web
 
@@ -24,7 +36,15 @@ Use `npm install` to install all dependancies, and `npm run dev` to start the de
 
 #### Using Docker
 
-> TODO
+Connect to the web pod with docker exec -it <contener-name> /bin/bash
+
+After making some dev stuff on the web application, you can build a new dev image with this commande from the root directory with this command:
+
+docker build -t <image_name> -f sdv-web/Dockerfile .
+
+edit docker-compose_dev.yml and change the image_name of the web_dev service
+
+run docker compose -f docker-compose_dev.yml up to see the change
 
 ## Production
 
@@ -36,7 +56,7 @@ Run `cargo build --release` to build and compile the app. This will create an ex
 
 #### Using Docker
 
-> TODO
+run docker compose up
 
 ### Web
 
@@ -46,8 +66,8 @@ Run `npm run build` to build the application, and run `npm run start` to start t
 
 #### Using Docker
 
-> TODO
+run docker compose up
 
-#### Lien DockerHub
+#### Image link Database 
 
 https://hub.docker.com/repositories/achabazam

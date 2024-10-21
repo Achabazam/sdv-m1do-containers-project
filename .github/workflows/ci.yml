@@ -25,11 +25,11 @@ jobs:
         with:
           context: "{{defaultContext}}:sdv-web"
           push: true
-          tags: achabazam/personal_repo:web_dev,achabazam/personal_repo:latest
+          tags: achabazam/personal_repo:web_prod
       -
         name: Build and push image api dev
         uses: docker/build-push-action@v6
         with:
           context: "{{defaultContext}}:sdv-api"
           push: true
-          tags: achabazam/personal_repo:api_dev,achabazam/personal_repo:latest
+          tags: achabazam/personal_repo:api_prod
