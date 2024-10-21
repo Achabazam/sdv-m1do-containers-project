@@ -24,6 +24,8 @@ After making some dev stuff on the api, you can build a new dev image with this 
 
 docker build -t <image_name> -f sdv-api/Dockerfile .
 
+to destroy previous conteners run docker compose up
+
 edit docker-compose_dev.yml and change the image_name of the api_dev service
 
 run docker compose -f docker-compose_dev.yml up to see the change
@@ -42,11 +44,17 @@ After making some dev stuff on the web application, you can build a new dev imag
 
 docker build -t <image_name> -f sdv-web/Dockerfile .
 
+to destroy previous conteners run docker compose up
+
 edit docker-compose_dev.yml and change the image_name of the web_dev service
 
 run docker compose -f docker-compose_dev.yml up to see the change
 
 ## Production
+
+### Production usage
+
+Push the change before lauching the docker compose up
 
 ### API
 
