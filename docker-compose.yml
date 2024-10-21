@@ -1,3 +1,23 @@
+
+networks:
+    dev-network:
+      driver: bridge
+
 services:
   api_dev:
-  
+    image: api_cont:dev_3
+    ports:
+      - "8888:80"
+    networks:
+      - dev-network
+
+
+  web_dev:
+    image: web_cont:dev_3
+    ports:
+      - "3333:3000"
+    networks:
+      - dev-network
+    environment:
+      - API_DEV_IP=api_dev
+      - API_URL=http://api_dev:80
