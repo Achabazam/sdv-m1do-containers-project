@@ -19,5 +19,5 @@ services:
     networks:
       - dev-network
     environment:
-      - API_DEV_IP=api_dev
-      - API_URL=http://api_dev:80
+      - API_DEV_IP=api_prod
+      - API_URL=http://api_prod:80

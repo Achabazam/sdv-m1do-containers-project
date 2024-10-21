@@ -76,6 +76,10 @@ Run `npm run build` to build the application, and run `npm run start` to start t
 
 run docker compose up
 
+#### Access application
+
+http://localhost:3333
+
 #### Image link Database 
 
 https://hub.docker.com/repositories/achabazam
