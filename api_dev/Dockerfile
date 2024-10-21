@@ -1,6 +1,6 @@
 FROM rust:latest
 WORKDIR /api
-COPY ./sdv-api/ .
+COPY ../sdv-api/ .
 RUN cargo build --release
 
 EXPOSE 8000
