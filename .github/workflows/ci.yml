@@ -23,13 +23,13 @@ jobs:
         name: Build and push image web dev
         uses: docker/build-push-action@v6
         with:
-          context: ./web_dev/Dockerfile
+          context: web_dev/Dockerfile
           push: true
-          tags: ${{ github.sha }}
+          tags: ${{ github.sha }}-${{ github.workspace }}
       -
-        name: Build and push image web dev
+        name: Build and push image api dev
         uses: docker/build-push-action@v6
         with:
-          context: ./api_dev/Dockerfile
+          context: api_dev/Dockerfile
           push: true
           tags: ${{ github.sha }}-${{ github.workspace }}
