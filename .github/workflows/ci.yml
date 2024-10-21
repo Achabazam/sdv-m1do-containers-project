@@ -23,13 +23,13 @@ jobs:
         name: Build and push image web dev
         uses: docker/build-push-action@v6
         with:
-          context: "{{defaultContext}}:web_dev"
+          context: "{{defaultContext}}:sdv-web"
           push: true
           tags: web_dev:latest
       -
         name: Build and push image api dev
         uses: docker/build-push-action@v6
         with:
-          context: "{{defaultContext}}:api_dev"
+          context: "{{defaultContext}}:sdv-api"
           push: true
           tags: api_dev:latest
