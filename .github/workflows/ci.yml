@@ -25,11 +25,11 @@ jobs:
         with:
           context: web_dev/Dockerfile
           push: true
-          tags: ${{ github.sha }}-${{ github.workspace }}
+          tags: web_dev:latest
       -
         name: Build and push image api dev
         uses: docker/build-push-action@v6
         with:
           context: api_dev/Dockerfile
           push: true
-          tags: ${{ github.sha }}-${{ github.workspace }}
+          tags: api_dev:latest
